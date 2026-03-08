@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>AutoSmart AI</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+text-align:center;
+margin:0;
+padding:0;
+}
+
+header{
+padding:30px;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#38bdf8;
+}
+
+.logo span{
+color:white;
+}
+
+.container{
+margin-top:80px;
+}
+
+h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+p{
+color:#cbd5f5;
+}
+
+input{
+width:400px;
+max-width:80%;
+padding:15px;
+border-radius:8px;
+border:none;
+margin-top:20px;
+font-size:16px;
+}
+
+button{
+display:block;
+margin:20px auto;
+padding:15px 40px;
+font-size:18px;
+border:none;
+border-radius:8px;
+background:#38bdf8;
+color:black;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#0ea5e9;
+}
+
+.result{
+margin-top:40px;
+font-size:22px;
+}
+
+footer{
+margin-top:120px;
+padding:20px;
+color:#94a3b8;
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">🚗 Auto<span>Smart</span> AI</div>
+</header>
+
+<div class="container">
+
+<h1>¿Este coche es caro?</h1>
+
+<p>Pega el enlace de un anuncio y nuestra IA analizará el precio real del coche.</p>
+
+<input id="link" type="text" placeholder="Pega el enlace del coche">
+
+<button onclick="analizar()">Analizar coche</button>
+
+<div class="result" id="resultado"></div>
+
+</div>
+
+<footer>
+AutoSmart AI © 2026
+</footer>
+
+<script>
+
+function analizar(){
+
+let precios = ["Barato 🟢","Precio justo 🟡","Caro 🔴"];
+
+let random = precios[Math.floor(Math.random()*precios.length)];
+
+document.getElementById("resultado").innerHTML =
+"Resultado del análisis: <b>"+random+"</b>";
+
+}
+
+</script>
+
+</body>
+</html>
